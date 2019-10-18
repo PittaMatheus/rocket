@@ -5,12 +5,8 @@ const app = express();
 
 mongoose.connect('mongodb+srv://matheus:matheusSenha@betaversion-cabyo.mongodb.net/beta?retryWrites=true&w=majority', {
   useNewUrlParser: true,
-  useUnifiedTopology:  true,
+  useUnifiedTopology: true,
 });
-
-
-
-
 
 // aceita formatos json
 app.use(express.json());

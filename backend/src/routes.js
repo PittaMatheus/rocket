@@ -17,9 +17,9 @@ const upload = multer(uploadConfig);
 routes.post('/sessions', SessionController.store);
 
 // para mais imagens - trocar single por array
-routes.post('/spots', upload.single('thumbnail'),SpotController.store);
+routes.post('/spots', upload.single('thumbnail'), SpotController.store);
 
-
+routes.get('/spots',  SpotController.index);
 
 
 // exportando as rotas
