@@ -5,6 +5,8 @@ const uploadConfig = require('./config/upload');
 
 const SessionController = require('./controllers/SessionController');
 const SpotController = require('./controllers/SpotController');
+const ProfileControl = require('./controllers/ProfileController');
+
 
 
 const routes = express.Router();
@@ -20,6 +22,8 @@ routes.post('/sessions', SessionController.store);
 routes.post('/spots', upload.single('thumbnail'), SpotController.store);
 
 routes.get('/spots',  SpotController.index);
+routes.get('/profiles',  ProfileControl.show);
+
 
 
 // exportando as rotas
