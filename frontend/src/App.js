@@ -1,22 +1,21 @@
 import React from 'react';
+import logo from './assets/logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="container">
+      <img className="imgLogo" src={logo} alt="Logo do clube"></img>
+      <div className="content">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          Entre e descubra seus talentos abelha rainha <strong>palmeiras</strong> mundial 51
+       </p>
+        <form>
+          <label htmlFor="email">Email*</label>
+          <input type="email" id="email" placeholder="fla email" />
+          <button type="submit" className="btn">Entrar</button>
+        </form>
+      </div>
     </div>
   );
 }
